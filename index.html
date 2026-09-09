@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Fem systemprogrammer, fem tastatursnarveier og en sammenligning av sju filsystemer.">
+  <title>Operativsystem og filsystem – macOS</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body id="toppen">
+  <a class="skip-link" href="#innhold">Hopp til innhold</a>
+  <header class="site-header">
+    <nav class="navigation" aria-label="Innhold">
+      <a class="site-name" href="#toppen" aria-label="macOS – til toppen">macOS</a>
+      <ul class="nav-links">
+        <li><a href="#systemprogrammer">Systemprogrammer</a></li>
+        <li><a href="#snarveier">Snarveier</a></li>
+        <li><a href="#filsystemer">Filsystemer</a></li>
+        <li><a href="#kilder">Kilder</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="innhold" tabindex="-1">
+    <div class="content">
+      <header class="page-header">
+        <p class="topic">macOS</p>
+        <h1>Operativsystem<br>og filsystem</h1>
+        <p class="intro">macOS er operativsystemet på Mac. Det styrer maskinen og lar oss bruke programmer og arbeide med filer.</p>
+      </header>
+
+      <section class="assignment-section" aria-labelledby="del-en">
+        <p class="section-label">Del 1</p>
+        <h2 id="del-en">Systemprogrammer og snarveier</h2>
+        <div class="item-columns">
+          <div class="item-group" id="systemprogrammer" tabindex="-1">
+            <h3>Systemprogrammer</h3>
+            <dl class="item-list">
+              <div class="item">
+                <dt>Spotlight</dt>
+                <dd>Søker raskt etter programmer, filer og mapper på Macen.</dd>
+              </div>
+              <div class="item">
+                <dt>Finder</dt>
+                <dd>Brukes til å finne, åpne, flytte og organisere filer og mapper.</dd>
+              </div>
+              <div class="item">
+                <dt>Aktivitetsmonitor</dt>
+                <dd>Viser hvor mye CPU, minne, energi og nettverk programmer bruker.</dd>
+              </div>
+              <div class="item">
+                <dt>Diskverktøy</dt>
+                <dd>Brukes til å formatere, administrere og kontrollere disker for feil.</dd>
+              </div>
+              <div class="item">
+                <dt>Terminal</dt>
+                <dd>Lar deg styre Macen og arbeide med filer ved å skrive kommandoer.</dd>
+              </div>
+            </dl>
+          </div>
+          <div class="item-group" id="snarveier" tabindex="-1">
+            <h3>Snarveier</h3>
+            <dl class="item-list">
+              <div class="item">
+                <dt><span class="visually-hidden">Command + mellomrom</span><span class="shortcut" aria-hidden="true"><kbd>⌘</kbd><span class="plus">+</span><kbd>Space</kbd></span></dt>
+                <dd>Åpner Spotlight, slik at du raskt kan søke på Macen.</dd>
+              </div>
+              <div class="item">
+                <dt><span class="visually-hidden">Command + Tab</span><span class="shortcut" aria-hidden="true"><kbd>⌘</kbd><span class="plus">+</span><kbd>Tab</kbd></span></dt>
+                <dd>Bytter mellom åpne programmer.</dd>
+              </div>
+              <div class="item">
+                <dt><span class="visually-hidden">Command + Shift + 3</span><span class="shortcut" aria-hidden="true"><kbd>⌘</kbd><span class="plus">+</span><kbd>Shift</kbd><span class="plus">+</span><kbd>3</kbd></span></dt>
+                <dd>Tar et skjermbilde av hele skjermen.</dd>
+              </div>
+              <div class="item">
+                <dt><span class="visually-hidden">Command + Shift + 4</span><span class="shortcut" aria-hidden="true"><kbd>⌘</kbd><span class="plus">+</span><kbd>Shift</kbd><span class="plus">+</span><kbd>4</kbd></span></dt>
+                <dd>Lar deg velge et område av skjermen og ta skjermbilde av det.</dd>
+              </div>
+              <div class="item">
+                <dt><span class="visually-hidden">Command + Option + Escape</span><span class="shortcut" aria-hidden="true"><kbd>⌘</kbd><span class="plus">+</span><kbd>Option</kbd><span class="plus">+</span><kbd>Esc</kbd></span></dt>
+                <dd>Åpner vinduet for å tvangsavslutte programmer som ikke svarer.</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <section class="assignment-section" id="filsystemer" aria-labelledby="del-to" tabindex="-1">
+        <p class="section-label">Del 2</p>
+        <h2 id="del-to">Filsystemer</h2>
+        <div class="table-frame" role="region" aria-label="Tabell over sju filsystemer. Rull vannrett på små skjermer." tabindex="0">
+          <table aria-describedby="size-note">
+            <caption class="visually-hidden">Sammenligning av sju filsystemer</caption>
+            <thead>
+              <tr>
+                <th scope="col">Navn</th>
+                <th scope="col">Medium</th>
+                <th scope="col">Journalling</th>
+                <th scope="col">Operativsystem</th>
+                <th scope="col">Maks filstørrelse</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">APFS</th>
+                <td>SSD / HDD</td>
+                <td>Nei<span class="cell-note">Bruker copy-on-write</span></td>
+                <td>macOS</td>
+                <td>8 EiB<span class="cell-note">Teoretisk</span></td>
+              </tr>
+              <tr>
+                <th scope="row">HFS+</th>
+                <td>HDD / SSD</td>
+                <td>Ja<span class="cell-note">I journalført variant</span></td>
+                <td>macOS</td>
+                <td>8 EiB<span class="cell-note">Teoretisk</span></td>
+              </tr>
+              <tr>
+                <th scope="row">NTFS</th>
+                <td>HDD / SSD</td>
+                <td>Ja</td>
+                <td>Windows</td>
+                <td>Opptil 8 PiB<span class="cell-note">Avhenger av Windows-versjon og klyngestørrelse</span></td>
+              </tr>
+              <tr>
+                <th scope="row">ext4</th>
+                <td>HDD / SSD</td>
+                <td>Ja</td>
+                <td>Linux</td>
+                <td>16 TiB<span class="cell-note">Med 4 KiB blokker</span></td>
+              </tr>
+              <tr>
+                <th scope="row">exFAT</th>
+                <td>USB-minne / SD-kort / SSD</td>
+                <td>Nei</td>
+                <td>Windows, macOS, Linux</td>
+                <td>16 EiB − 1 byte<span class="cell-note">Teoretisk</span></td>
+              </tr>
+              <tr>
+                <th scope="row">FAT32</th>
+                <td>USB-minne / SD-kort</td>
+                <td>Nei</td>
+                <td>Windows, macOS, Linux</td>
+                <td>4 GiB − 1 byte</td>
+              </tr>
+              <tr>
+                <th scope="row">ISO 9660</th>
+                <td>CD / DVD</td>
+                <td>Nei</td>
+                <td>Windows, macOS, Linux</td>
+                <td>4 GiB − 1 byte<span class="cell-note">Nivå 1 og 2</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="table-note" id="size-note">GiB, TiB, PiB og EiB er binære størrelsesenheter. 1 GiB = 1024 MiB. Teoretiske grenser kan være høyere enn det operativsystemet og lagringsmediet støtter.</p>
+        <div class="journal-note">
+          <h3>Hva betyr journalling?</h3>
+          <p>Journalling betyr at filsystemet registrerer endringer i en logg før de fullføres. Loggen gjør det lettere å gjenopprette et konsistent filsystem etter strømbrudd eller krasj.</p>
+        </div>
+      </section>
+    </div>
+
+    <section class="sources" id="kilder" aria-labelledby="sources-title" tabindex="-1">
+      <div class="content">
+        <h2 id="sources-title">Kilder</h2>
+        <ul>
+          <li><span>Apple Support</span> — <a href="https://support.apple.com/guide/mac-help/welcome/mac">Mac-brukerhåndbok</a>, <a href="https://support.apple.com/en-us/102650">tastatursnarveier</a>, <a href="https://support.apple.com/guide/activity-monitor/welcome/mac">Aktivitetsmonitor</a>, <a href="https://support.apple.com/guide/disk-utility/welcome/mac">Diskverktøy</a> og <a href="https://support.apple.com/guide/terminal/welcome/mac">Terminal</a>.</li>
+          <li><span>Apple Developer</span> — <a href="https://developer.apple.com/library/archive/documentation/FileManagement/Conceptual/APFS_Guide/VolumeFormatComparison/VolumeFormatComparison.html">APFS og HFS+</a> og <a href="https://developer.apple.com/library/archive/documentation/FileManagement/Conceptual/APFS_Guide/FAQ/FAQ.html">copy-on-write</a>.</li>
+          <li><span>Microsoft Learn</span> — <a href="https://learn.microsoft.com/en-us/windows-server/storage/file-server/ntfs-overview">NTFS</a> og <a href="https://learn.microsoft.com/en-us/windows/win32/fileio/filesystem-functionality-comparison">sammenligning av filsystemer</a>.</li>
+          <li><span>Red Hat / Linux-kjernen</span> — <a href="https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/7/html/storage_administration_guide/ch-ext4">ext4 og journalling</a> og <a href="https://www.kernel.org/doc/html/latest/filesystems/ext4/blocks.html">størrelsesgrenser</a>.</li>
+          <li><span>Ecma International</span> — <a href="https://ecma-international.org/publications-and-standards/standards/ecma-119/">ECMA-119 / ISO 9660</a>.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

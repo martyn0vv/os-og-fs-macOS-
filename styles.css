@@ -1,0 +1,130 @@
+/* Farger og typografi */
+:root {
+  color-scheme: light;
+  --text: #1d1d1f;
+  --secondary: #626266;
+  --line: #d2d2d7;
+  --surface: #f5f5f7;
+  --anchor-offset: 96px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--text);
+  background: #fff;
+  -webkit-font-smoothing: antialiased;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: var(--anchor-offset); }
+body { margin: 0; }
+h1, h2, h3, p { margin: 0; }
+a { color: inherit; text-underline-offset: 3px; }
+a:hover { text-decoration: underline; }
+:focus-visible { outline: 2px solid var(--text); outline-offset: 5px; border-radius: 2px; }
+::selection { background: #dcdce0; }
+.content { width: min(980px, calc(100% - 64px)); margin-inline: auto; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+.skip-link { position: fixed; z-index: 20; top: 12px; left: 16px; padding: 10px 16px; transform: translateY(-160%); border: 1px solid var(--line); border-radius: 8px; background: #fff; }
+.skip-link:focus { transform: translateY(0); }
+
+/* Navigasjon: vanlige lenker til delene på siden */
+.site-header { position: sticky; top: 0; z-index: 10; border-bottom: 1px solid rgba(0, 0, 0, .14); background: rgba(255, 255, 255, .92); -webkit-backdrop-filter: saturate(180%) blur(20px); backdrop-filter: saturate(180%) blur(20px); }
+.navigation { width: min(980px, calc(100% - 64px)); min-height: 64px; margin-inline: auto; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.site-name { font-size: 22px; font-weight: 600; letter-spacing: -.035em; text-decoration: none; }
+.nav-links { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 28px; list-style: none; margin: 0; padding: 0; }
+.nav-links a { display: inline-block; padding-block: 14px; font-size: 14px; line-height: 1.4; text-decoration: none; }
+.nav-links a:hover { text-decoration: underline; }
+
+/* Tittel og oppgave */
+.page-header { padding: 76px 0 72px; text-align: center; }
+.topic { margin-bottom: 15px; font-size: 21px; font-weight: 600; letter-spacing: -.025em; }
+h1 { font-size: clamp(36px, 5.8vw, 56px); font-weight: 650; line-height: 1.08; letter-spacing: -.045em; }
+.intro { max-width: 620px; margin: 24px auto 0; font-size: 21px; line-height: 1.5; letter-spacing: -.02em; color: var(--secondary); }
+.assignment-section { padding: 48px 0 56px; border-top: 1px solid var(--line); }
+.section-label { color: var(--secondary); font-size: 14px; font-weight: 500; margin-bottom: 9px; }
+h2 { font-size: 32px; font-weight: 650; letter-spacing: -.035em; line-height: 1.2; text-wrap: balance; }
+h3 { font-size: 23px; font-weight: 600; letter-spacing: -.025em; line-height: 1.25; }
+.item-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; margin-top: 36px; }
+.item-group { min-width: 0; }
+.item-group h3 { padding-bottom: 20px; border-bottom: 1px solid var(--line); }
+.item-list { margin: 0; }
+.item { min-height: 120px; padding: 22px 0; border-bottom: 1px solid #e5e5e7; }
+.item:last-child { border: 0; padding-bottom: 0; }
+dt { display: flex; align-items: center; min-height: 30px; font-weight: 600; letter-spacing: -.015em; }
+dd { margin: 6px 0 0; color: var(--secondary); }
+.shortcut { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; }
+kbd { display: inline-flex; align-items: center; justify-content: center; min-width: 29px; min-height: 28px; padding: 1px 8px; border: 1px solid #c9c9cd; border-radius: 5px; background: #fafafa; box-shadow: 0 1px 0 #c9c9cd; font: 500 14px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+.plus { font-size: 14px; color: var(--secondary); font-weight: 400; }
+
+/* Filsystemtabell */
+.table-frame { overflow-x: auto; margin-top: 30px; border: 1px solid var(--line); border-radius: 10px; }
+table { width: 100%; min-width: 790px; border-collapse: collapse; text-align: left; font-size: 16px; line-height: 1.45; }
+th, td { padding: 19px 17px; vertical-align: top; border-bottom: 1px solid #e5e5e7; }
+thead { background: var(--surface); }
+thead th { font-size: 14px; font-weight: 600; border-bottom-color: var(--line); }
+tbody th { width: 12%; white-space: nowrap; font-weight: 600; }
+th:nth-child(2) { width: 20%; }
+th:nth-child(3) { width: 19%; }
+th:nth-child(4) { width: 22%; }
+tbody tr:last-child > * { border-bottom: 0; }
+.cell-note { display: block; margin-top: 4px; color: var(--secondary); font-size: 14px; }
+.table-note { max-width: 920px; margin-top: 15px; color: var(--secondary); font-size: 14px; line-height: 1.55; }
+.journal-note { margin-top: 32px; padding: 28px 32px; border-radius: 14px; background: var(--surface); }
+.journal-note h3 { font-size: 21px; margin-bottom: 10px; }
+.journal-note p { max-width: 840px; color: var(--secondary); }
+
+/* Kilder */
+.sources { padding: 42px 0 48px; background: var(--surface); }
+.sources h2 { font-size: 24px; }
+.sources ul { margin: 20px 0 0; padding-left: 19px; color: var(--secondary); font-size: 14px; line-height: 1.7; }
+.sources li { padding-left: 3px; margin-top: 9px; }
+.sources li > span { color: var(--text); font-weight: 600; }
+.sources a { text-decoration: underline; text-decoration-color: #a6a6ac; }
+.sources a:hover { color: var(--text); text-decoration-color: var(--text); }
+
+/* Små skjermer og større tekst */
+@media (max-width: 760px) {
+  :root { --anchor-offset: 135px; }
+  .navigation { min-height: 0; flex-direction: column; align-items: flex-start; gap: 0; padding: 13px 0 5px; }
+  .nav-links { gap: 0 22px; }
+  .nav-links a { padding-block: 10px; }
+  .page-header { padding: 52px 0; }
+  .intro { font-size: 19px; max-width: 540px; }
+  .item-columns { grid-template-columns: 1fr; gap: 36px; }
+  .item { min-height: 0; padding-block: 19px; }
+  h2 { font-size: 28px; }
+  .assignment-section { padding: 36px 0 40px; }
+}
+@media (max-width: 480px) {
+  :root { --anchor-offset: 175px; }
+  .content, .navigation { width: calc(100% - 40px); }
+  .nav-links { column-gap: 20px; }
+  .page-header { padding: 44px 0; }
+  .topic { font-size: 19px; }
+  .intro { font-size: 18px; }
+  h2 { font-size: 26px; }
+  h3 { font-size: 22px; }
+  .journal-note { padding: 24px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+@media print {
+  @page { margin: 15mm; }
+  :root { font-size: 10pt; }
+  .site-header, .skip-link { display: none; }
+  .content { width: 100%; }
+  .page-header { padding: 0 0 25px; }
+  h1 { font-size: 30pt; }
+  .intro { font-size: 12pt; margin-top: 12px; }
+  h2 { font-size: 18pt; }
+  h3 { font-size: 13pt; }
+  .assignment-section { padding: 24px 0; }
+  .item-columns { grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 20px; }
+  .item { min-height: 0; padding-block: 12px; break-inside: avoid; }
+  .table-frame { overflow: visible; }
+  table { min-width: 0; font-size: 9pt; }
+  th, td { padding: 9px 7px; }
+  thead th, .cell-note, .table-note, .sources ul { font-size: 8pt; }
+  thead { display: table-header-group; }
+  tr, .journal-note, .sources li { break-inside: avoid; }
+  h2, h3 { break-after: avoid; }
+  .sources { padding: 20px 0 0; background: #fff; border-top: 1px solid var(--line); }
+}

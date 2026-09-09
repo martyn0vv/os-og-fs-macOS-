@@ -1,16 +1,17 @@
 # Operativsystem og filsystem – macOS
 
-Skoleoppgave på norsk bokmål: fem systemprogrammer, fem tastatursnarveier, en tabell med sju filsystemer og fem kolonner, en kort forklaring av journalling og kildelenker.
+En skoleoppgave på norsk bokmål, laget med vanlig HTML og CSS. Svart-hvitt utforming inspirert av Apple Support, med navigasjon til delene på siden.
 
-## Åpne prosjektet
+## Åpne siden
 
-Du trenger Node.js 22.13 eller nyere.
+Dobbeltklikk på `index.html`. Ingen installasjon eller internettilkobling er nødvendig for å lese siden. Kildelenkene åpner eksterne nettsider.
 
-```sh
-npm ci
-npm run dev
-```
+- `index.html`: alt innhold og navigasjon.
+- `styles.css`: utforming for datamaskin, mobil og utskrift.
+- `favicon.svg`: ikon i nettleserfanen.
 
-Åpne den lokale adressen som vises. Lag produksjonsversjonen med `npm run build`.
+Siden inneholder nøyaktig fem systemprogrammer og fem snarveier, sju filsystemer i en tabell med fem kolonner, en forklaring av journalling og kilder. Navigasjonen bruker vanlige ankerlenker uten JavaScript.
 
-Innholdet ligger i `app/page.tsx`, utformingen i `app/globals.css` og sidetittel og språk i `app/layout.tsx`.
+## Valgfri lokal server og publisering
+
+Med Node.js 22.13 eller nyere kan du kjøre `npm run dev` for en lokal forhåndsvisning. `npm run build` kopierer de tre nettstedsfilene til `dist/`. Ingen npm-pakker trenger å installeres.
