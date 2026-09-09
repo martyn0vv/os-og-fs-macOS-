@@ -1,17 +1,35 @@
 # Operativsystem og filsystem – macOS
 
-En skoleoppgave på norsk bokmål, laget med vanlig HTML og CSS. Svart-hvitt utforming inspirert av Apple Support, med navigasjon til delene på siden.
+En skoleoppgave på norsk bokmål med et svart-hvitt uttrykk inspirert av Apple Support. Navigasjonen øverst går til delene på siden.
 
-## Åpne siden
+En kort React-animasjon viser «macOS» på en glassflate når siden åpnes eller lastes på nytt, før den går over til innholdet. Animasjonen hoppes over ved redusert bevegelse og kan avbrytes med tastatur, berøring eller rulling.
 
-Dobbeltklikk på `index.html`. Ingen installasjon eller internettilkobling er nødvendig for å lese siden. Kildelenkene åpner eksterne nettsider.
+## Kjør lokalt
 
-- `index.html`: alt innhold og navigasjon.
+Du trenger Node.js 22.13 eller nyere.
+
+```sh
+npm ci
+npm run dev
+```
+
+Åpne adressen som vises i terminalen.
+
+## Bygg og forhåndsvis
+
+```sh
+npm run build
+npm run start
+```
+
+`dist/` inneholder den ferdige nettsiden og kan legges på en statisk webserver. Alle JavaScript- og CSS-filer bygges lokalt; siden trenger ingen CDN-er eller API-nøkler.
+
+## Filer
+
+- `index.html`: oppgaven og ankerlenkene. Innholdet er tilgjengelig også uten JavaScript.
 - `styles.css`: utforming for datamaskin, mobil og utskrift.
-- `favicon.svg`: ikon i nettleserfanen.
+- `src/main.jsx`: React-komponenten som styrer introen og rydder den bort.
+- `src/intro.css`: glasseffekten og overgangen.
+- `vite.config.js`: oppsett for utvikling og bygging.
 
-Siden inneholder nøyaktig fem systemprogrammer og fem snarveier, sju filsystemer i en tabell med fem kolonner, en forklaring av journalling og kilder. Navigasjonen bruker vanlige ankerlenker uten JavaScript.
-
-## Valgfri lokal server og publisering
-
-Med Node.js 22.13 eller nyere kan du kjøre `npm run dev` for en lokal forhåndsvisning. `npm run build` kopierer de tre nettstedsfilene til `dist/`. Ingen npm-pakker trenger å installeres.
+Oppgaven har nøyaktig fem systemprogrammer og fem snarveier, sju filsystemer i en tabell med fem kolonner, en kort forklaring av journalling og kilder.
