@@ -6,8 +6,10 @@
     "node": ">=22.13.0"
   },
   "scripts": {
+    "predev": "npm run build:intro",
     "dev": "vite",
-    "build": "vite build",
+    "build:intro": "vite build --mode intro",
+    "build": "npm run build:intro && node scripts/build.mjs",
     "start": "vite preview --host 127.0.0.1"
   },
   "type": "module",
